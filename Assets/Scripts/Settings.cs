@@ -7,6 +7,21 @@ public class Settings : MonoBehaviour
 	[Header("Game Object References")]
 	public Transform player;
 
+	public float range = 10;
+
+	public float speed = 2;
+
+	public static float getSpeed() {
+		return instance.speed;
+    }
+	public static void setRange(float range) {
+		instance.range = range;
+
+	}
+	public static float getRange() {
+		return instance.range;
+	}
+
 	[Header("Collision Info")]
 	public float playerCollisionRadius = .5f;
 	public static float PlayerCollisionRadius
@@ -57,6 +72,11 @@ public class Settings : MonoBehaviour
 
 	public static bool IsPlayerDead()
 	{
-		return instance.player == null;
+		try {
+			return instance.player == null;
+		}
+        catch {
+			return true;
+        }
 	}
 }

@@ -44,7 +44,7 @@ public class ProjectileBehaviour : MonoBehaviour, IConvertGameObjectToEntity
 		MoveSpeed moveSpeed = new MoveSpeed { Value = speed };		
 		manager.AddComponentData(entity, moveSpeed);
 
-		TimeToLive timeToLive = new TimeToLive { Value = 0.1f };
+		TimeToLive timeToLive = new TimeToLive { Value = lifeTime };
 		manager.AddComponentData(entity, timeToLive);
 	}
 }

@@ -5,11 +5,23 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+    Advanced Settings:
+      value: 183b144645154b6805011b0314355e1e15121c1d233a2a343e6b4773e4e1382be78d2b
+      flags: 0
+    Entity Inspector Settings:
+      value: 183b144645154b790c0d07271e271d4a564654406c6866706f0d1420f2ec3521c1e83bf9e8343a322d36f62c017c5b7ff40b0518f36117
+      flags: 0
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      value: 22424703114646680e0b0227036c7a3325572b22232732353f67083debf42d
       flags: 0
     RecentlyUsedScenePath-1:
-      value: 22424703114646680e0b0227036c7a3325572b22232732353f67083debf42d
+      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c7d1f1f132b292926237e38271427fb
+      flags: 0
+    unity-properties__ui-persistent-state:
+      value: 183b144645154b7d0202082d05376c0417031d6876681d5a6d695d73a2a07478f98d76a9a77a7f7c7942af7c447e4314f7134b51b6465b5d415ea45c41a649415daf58855a885f5c8b595c8e8d5d93d5d4dac1ef9ab1a7dedfd3b3f79eb0aeb8b5b1e5bbeab59680eaefbe8ce3a88784818af5f4cdc1c0c9bbc6d8dcb0e0c6d2cdd3c78c99bce5b1c4
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650

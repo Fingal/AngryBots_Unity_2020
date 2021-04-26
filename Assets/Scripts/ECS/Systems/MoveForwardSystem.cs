@@ -7,8 +7,7 @@ using UnityEngine;
 
 namespace Unity.Transforms
 {
-	public class MoveForwardSystem : JobComponentSystem
-	{
+	public class MoveForwardSystem : SystemBase {
 		[BurstCompile]
 		[RequireComponentTag(typeof(MoveForward))]
 		struct MoveForwardRotation : IJobForEach<Translation, Rotation, MoveSpeed>
@@ -21,14 +20,14 @@ namespace Unity.Transforms
 			}
 		}
 
-		protected override JobHandle OnUpdate(JobHandle inputDeps)
+		protected override void OnUpdate()
 		{
-			var moveForwardRotationJob = new MoveForwardRotation
-			{
-				dt = Time.DeltaTime
-			};
+			var dt = Time.DeltaTime;
+			Entities.WithAll<MoveForward>().WithBurst().ForEach((ref Translation pos, ref Rotation rot, ref MoveSpeed speed) => {
+				pos.Value = pos.Value + (dt * speed.Value * math.forward(rot.Value));
+			}).ScheduleParallel();
 
-			return moveForwardRotationJob.Schedule(this, inputDeps);
+			//return moveForwardRotationJob.Schedule(this, inputDeps);
 		}
 	}
 }

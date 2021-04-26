@@ -52,12 +52,15 @@
      <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\ECS\Data\MoveSpeedComponent.cs" />
      <Compile Include="Assets\Scripts\ECS\Conversion\MoveForwardConversion.cs" />
+     <Compile Include="Assets\Scripts\ECS\BoidTag.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\ECS\Systems\CollisionSystem.cs" />
      <Compile Include="Assets\Scripts\BulletImpactPool.cs" />
      <Compile Include="Assets\Scripts\Settings.cs" />
      <Compile Include="Assets\Scripts\ECS\Data\TimeToLiveComponent.cs" />
      <Compile Include="Assets\Scripts\PlayerShooting.cs" />
+     <Compile Include="Assets\Scripts\ECS\Systems\BoidMovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Boid.cs" />
      <Compile Include="Assets\Scripts\ECS\Systems\RemoveDeadSystem.cs" />
      <Compile Include="Assets\Scripts\ProjectileBehaviour.cs" />
      <Compile Include="Assets\Scripts\ECS\Data\MoveForwardComponent.cs" />
@@ -67,7 +70,11 @@
      <Compile Include="Assets\Scripts\ECS\Data\PlayerTagComponent.cs" />
      <Compile Include="Assets\Scripts\ECS\Systems\TurnTowardsPlayerSystem.cs" />
      <Compile Include="Assets\Scripts\PlayerMovementAndLook.cs" />
+     <Compile Include="Assets\Scripts\BoidSpawner.cs" />
      <Compile Include="Assets\Scripts\ECS\Systems\PlayerTransformUpdateSystem.cs" />
+     <Compile Include="Assets\Scripts\ECS\Data\DirectionComponent.cs" />
+     <Compile Include="Assets\Scripts\ECS\Systems\DirectionToRotationSystem.cs" />
+     <Compile Include="Assets\Scripts\ECS\Systems\MoveBoidForwardSystem.cs" />
      <None Include="Assets\VFX (Shared)\Shaders\BackgroundAndCharacters\ReflectiveBackgroundPlanar.shader" />
      <None Include="Assets\VFX (Shared)\Shader\Refraction.shader" />
      <None Include="Assets\VFX (Shared)\Shaders\BackgroundAndCharacters\EnemySelfIlluminationReflective.shader" />
