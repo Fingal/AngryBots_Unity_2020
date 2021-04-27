@@ -28,7 +28,7 @@ namespace Unity.Transforms
 		//}
 
 		protected override void OnUpdate() {
-			var _boidsPosition = boidPositionQuery.ToComponentDataArray<Translation>(Allocator.TempJob);
+			NativeArray<Translation> _boidsPosition = boidPositionQuery.ToComponentDataArray<Translation>(Allocator.TempJob);
 			var boidsPosition = _boidsPosition.AsReadOnly();
 			var _boidsDirection = boidDirectionQuery.ToComponentDataArray<Direction>(Allocator.TempJob);
 			var boidsDirection = _boidsDirection.AsReadOnly();
@@ -70,7 +70,8 @@ namespace Unity.Transforms
 			//return moveForwardRotationJob.Schedule(this, inputDeps);
 
 			var boidsHandle = _boidsPosition.Dispose(jobHandle);
-			this.Dependency = JobHandle.CombineDependencies(boidsHandle,_boidsDirection.Dispose(jobHandle));
+			var secondHandle = _boidsDirection.Dispose(jobHandle);
+			this.Dependency = JobHandle.CombineDependencies(boidsHandle, secondHandle);
 
 
 		}

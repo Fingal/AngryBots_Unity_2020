@@ -7,3 +7,4 @@ public struct Direction : IComponentData{
     public float3 Value;
 }
 
+
